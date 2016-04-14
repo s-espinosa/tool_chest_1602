@@ -1,0 +1,17 @@
+<% if flash %>
+  <% flash.each do |type, message| %>
+    <%= content_tag :div, message, class: "#{type}"  %> <br>
+  <% end %>
+<% end %>
+<%= form_for @tool do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %> <br>
+
+  <%= f.label :price %>
+  <%= f.text_field :price %> <br>
+
+  <%= f.label :quantity %>
+  <%= f.text_field :quantity %> <br>
+
+  <%= f.submit "Create Tool"%> <br>
+<% end %>

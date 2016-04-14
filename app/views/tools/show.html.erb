@@ -1,0 +1,10 @@
+<% if flash %>
+  <% flash.each do |type, message| %>
+    <%= content_tag :div, message, class: "#{type}"  %>
+  <% end %>
+<% end %>
+<div class="tool_info">
+  Name: <%= @tool.name %>
+  Price: <%= @tool.price %>
+  Quantity: <%= @tool.quantity %>
+</div>
